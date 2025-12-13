@@ -1,3 +1,4 @@
+import os
 import logging
 import sqlite3
 from datetime import datetime
@@ -8,7 +9,7 @@ from aiogram.dispatcher.filters.state import State, StatesGroup
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 # ================== TOKEN ==================
-API_TOKEN = "8277225125:AAESYsPkN4JBdL9jGzja4u2WbrMGEUc3aS4"
+API_TOKEN = os.environ.get("API_TOKEN")  # Environment variable orqali olinadi
 
 # ================== LOG ==================
 logging.basicConfig(level=logging.INFO)
